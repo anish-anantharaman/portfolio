@@ -1,9 +1,11 @@
 body {
     color: #fff !important;
+    background-color: #010e60;
+    margin: 0;
 }
 
 header {
-    background-color: #010E4A;
+    background-color: #010e4a;
 }
 
 .navbar {
@@ -18,7 +20,7 @@ header {
     ul {
         font-size: 25px;
         a {
-          color: white;  
+          color: #fff;  
         }
     }
 }
@@ -35,8 +37,10 @@ header {
     text-decoration: none;
 }
 
-body {
-    margin: 0;
+#home, 
+#skills, 
+#experience {
+    padding: 10px 90px 10px 90px;
 }
 
 
@@ -45,9 +49,7 @@ body {
 #home {
     display: flex;
     min-height: 600px;
-    padding: 60px 90px 60px 90px;
     box-sizing: border-box;
-    background-color: #010E60;
 }
 
 .intro {
@@ -56,6 +58,39 @@ body {
     flex-direction: column;
     justify-content: center;
     font-size: 24px;
+    
+    h1, h2, p {
+        margin-bottom: 2px;
+    }
+
+    .interactive-buttons {
+        margin-top: 15px;
+        display: flex;
+        gap: 15px;
+
+        .custom-btn {
+            font-size: 20px;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: #6366f1;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+        }
+
+        /* Hover effect */
+        .custom-btn:hover {
+            background-color: #4f46e5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Click effect */
+        .custom-btn:active {
+            transform: translateY(1px) scale(0.96);
+            box-shadow: none;
+        }
+    }
 }
 
 .profile-img {
@@ -75,13 +110,8 @@ body {
 
 /* Skills section */
 
-#skills {
-    padding: 60px 90px 60px 90px;
-    background-color: #000;
-}
-
 .skills-head {
-    text-align: center;
+    text-align: left;
     margin-bottom: 50px;
 
     h1 {
@@ -92,28 +122,143 @@ body {
 .skills-list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 50px;
-    max-width: 1000px;
-    margin: 0 auto;
+    gap: 20px;
+    /* max-width: 1600px; */
+    margin: 0;
 }
 
 .skill-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+    padding: 18px 22px;
+    background-color: #010e4a;
+    border: 1px solid #263b75;
+    border-radius: 12px;
+    transition: transform 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-4px);
+    background-color: #0c216b;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .skill-item img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    margin-bottom: 15px;
+    /* flex-shrink: 0;
+    margin: 0; */
 }
 
 .skill-item p {
     text-align: center;
     margin: 0;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
+}
+
+
+#experience {
+    background-color: #010e60;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.experience-head {
+    margin-bottom: 30px;
+}
+
+.experience-head h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Company and role */
+
+.experience-item {
+    max-width: 1000px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #263b75;
+    margin: 20px;
+}
+
+.company-exp-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+/* Company logo */
+
+.company-logo {
+    width: 66px;
+    height: 66px;
+    object-fit: contain;
+    flex-shrink: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.company-details h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.company-details h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #d1d9ed;
+    margin: 0 0 8px;
+}
+
+.experience-date {
+    font-size: 14px;
+    color: #aab9d4;
+}
+
+/* Responsibilities */
+
+.experience-responsibilities {
+    padding-left: 20px;
+    margin-top: 22px;
+}
+
+.experience-responsibilities li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #e0e6f2;
+    margin-bottom: 8px;
+    padding-left: 4px;
+}
+
+.experience-responsibilities li::marker {
+    color: #60a5fa;
+}
+
+/* Technology tags */
+
+.experience-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.experience-technologies span {
+    font-size: 13px;
+    color: #bfdbfe;
+    background-color: #101f55;
+    border: 1px solid #263b75;
+    padding: 6px 10px;
+    border-radius: 5px;
 }
