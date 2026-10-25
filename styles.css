@@ -39,7 +39,8 @@ header {
 
 #home, 
 #skills, 
-#experience {
+#experience,
+#contact {
     padding: 10px 90px 10px 90px;
 }
 
@@ -153,8 +154,6 @@ header {
     width: 60px;
     height: 60px;
     object-fit: contain;
-    /* flex-shrink: 0;
-    margin: 0; */
 }
 
 .skill-item p {
@@ -164,13 +163,9 @@ header {
     font-weight: 500;
 }
 
-
 #experience {
-    background-color: #010e60;
-    padding-top: 50px;
-    padding-bottom: 60px;
+    padding-top: 40px;
 }
-
 .experience-head {
     margin-bottom: 30px;
 }
@@ -261,4 +256,89 @@ header {
     border: 1px solid #263b75;
     padding: 6px 10px;
     border-radius: 5px;
+}
+
+
+
+/* Contact section */
+
+#contact {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.contact-head {
+    margin-bottom: 30px;
+
+    h1 {
+        font-size: 36px;
+        margin: 0 0 12px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #d1d9ed;
+        margin: 0;
+    }
+}
+
+/* Contact capsules */
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.contact-capsule {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 12px 24px;
+    border-radius: 50px;
+
+    background-color: #010e4a;
+    border: 1px solid #263b75;
+
+    transition: transform 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.contact-capsule:hover {
+    transform: translateY(-4px);
+    background-color: #0c216b;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    border-color: #6366f1;
+}
+
+.contact-capsule:active {
+    transform: translateY(1px) scale(0.97);
+}
+
+.contact-capsule:focus-visible {
+    outline: 2px solid #818cf8;
+    outline-offset: 4px;
+}
+
+/* Footer section */
+
+.footer {
+    background-color: #010e4a;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #263b75;
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        color: #aab9d4;
+    }
 }
